@@ -126,7 +126,7 @@ void ReFinedAudioProcessor::getStateInformation (MemoryBlock& destData)
 
 void ReFinedAudioProcessor::setStateInformation (const void* data, int sizeInBytes)
 {
-    ScopedPointer<XmlElement> xml(getXmlFromBinary(data, sizeInBytes));
+    std::unique_ptr<XmlElement> xml(getXmlFromBinary(data, sizeInBytes));
 
     if (xml != nullptr)
     {
