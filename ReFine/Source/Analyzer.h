@@ -2,7 +2,7 @@
 #define __ANALYZER_H__
 
 #include "../JuceLibraryCode/JuceHeader.h"
-#include "buffers.h"
+#include "Buffers.h"
 #include "ffft/FFTReal.h"
 
 class RmsEnvelope

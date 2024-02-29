@@ -4,7 +4,7 @@ BiquadCoefficients::BiquadCoefficients() : b0 (1), b1 (0), b2 (0), a1 (0), a2 (0
 
 void BiquadCoefficients::create (BiquadType::BiquadType type, double freq, double Q, double sampleRate)
 {
-    const double w0 = 2 * juce::double_Pi * freq / sampleRate;
+    const double w0 = 2 * juce::MathConstants<double>::pi * freq / sampleRate;
     const double cosw0 = cos(w0);
     const double alpha = sin(w0) / (2 * Q);
 

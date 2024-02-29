@@ -3,7 +3,7 @@
 
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "Analyzer.h"
-#include "buffers.h"
+#include "Buffers.h"
 #include "MiscDsp.h"
 
 class LevelHold

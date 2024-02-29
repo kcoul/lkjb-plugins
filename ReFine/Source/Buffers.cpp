@@ -1,4 +1,4 @@
-#include "buffers.h"
+#include "Buffers.h"
 
 RmsBuffer::RmsBuffer (int initSize)
     : buffer (initSize)

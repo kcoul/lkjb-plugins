@@ -1,6 +1,6 @@
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
-#include "xmmintrin.h"
+//#include "xmmintrin.h"
 
 
 #if JUCE_WINDOWS
@@ -79,8 +79,8 @@ void ReFinedAudioProcessor::releaseResources()
 
 void ReFinedAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer& /*midiMessages*/)
 {
-    const int csr = _mm_getcsr();
-    _mm_setcsr(csr | 0x8040);
+    //const int csr = _mm_getcsr();
+    //_mm_setcsr(csr | 0x8040);
 
     {
         const float low = parameters->getParameter("red")->getValue();
@@ -101,7 +101,7 @@ void ReFinedAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer&
 
     dsp.processBlock(chL, chR, numSamples);
  
-    _mm_setcsr(csr);
+    //_mm_setcsr(csr);
 }
 
 bool ReFinedAudioProcessor::hasEditor() const
